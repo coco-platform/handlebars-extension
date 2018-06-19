@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@coco-platform/handlebars-extension should support inline expression 1`] = `
+"  <style type=\\"text/css\\">
+.CloseIcon-icon-2xww{transition:opacity .3s ease-out}.CloseIcon-icon-2xww:hover{opacity:.8}
+</style>
+  <script type=\\"application/javascript\\">
+(function($) {$(document).ready(() &#x3D;&gt; {});})(jQuery);
+</script>
+  
+"
+`;
+
+exports[`@coco-platform/handlebars-extension should support link expression 1`] = `
+"  <link type=\\"text/css\\" href=\\"https://static.zhihu.com/heifetz/main.css\\">
+  <link type=\\"text/css\\" rel=\\"dns-prefetch\\" href=\\"//static.zhimg.com\\" async>
+  <script type=\\"application/javascript\\" src=\\"https://static.zhihu.com/heifetz/main.js\\" defer crossorigin=\\"anoymous\\"></script>
+  
+"
+`;

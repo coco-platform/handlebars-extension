@@ -4,11 +4,11 @@
  */
 
 // package
-const path = require('path');
-const fs = require('fs');
-const hbs = require('handlebars');
+import { readFileSync } from 'fs';
+import * as hbs from 'handlebars';
+import { resolve } from 'path';
 // internal
-const { inline, link } = require('../');
+import { inline, link } from '../src';
 // scope
 const options = { encoding: 'utf8' };
 
@@ -19,8 +19,8 @@ describe('@coco-platform/handlebars-extension', () => {
   });
 
   it('should support inline expression', () => {
-    const demo = path.resolve(__dirname, '__fixture__', 'inline.hbs');
-    const template = fs.readFileSync(demo, options);
+    const demo = resolve(__dirname, '__fixture__', 'inline.hbs');
+    const template = readFileSync(demo, options);
     const context = {
       criticals: [
         {
@@ -41,24 +41,22 @@ describe('@coco-platform/handlebars-extension', () => {
   });
 
   it('should support link expression', () => {
-    const demo = path.resolve(__dirname, '__fixture__', 'link.hbs');
-    const template = fs.readFileSync(demo, options);
+    const demo = resolve(__dirname, '__fixture__', 'link.hbs');
+    const template = readFileSync(demo, options);
     const context = {
       resources: [
-        'https://static.zhihu.com/heifetz/main.app.c994694b7b8c848b345c.css',
         {
-          href:
-            'https://static.zhihu.com/heifetz/main.app.c994694b7b8c848b345c.css',
+          href: 'https://static.zhihu.com/heifetz/main.css',
         },
         {
           rel: 'dns-prefetch',
           href: `//static.zhimg.com`,
+          async: true,
         },
-        'https://static.zhihu.com/heifetz/main.app.c994694b7b8c848b345c.js',
         {
-          src:
-            'https://static.zhihu.com/heifetz/main.signflow.6af7025179e6b1979aca.js',
-          crossorigin: true,
+          src: 'https://static.zhihu.com/heifetz/main.js',
+          defer: true,
+          crossorigin: 'anoymous',
         },
         {},
       ],
@@ -66,10 +64,5 @@ describe('@coco-platform/handlebars-extension', () => {
     const result = hbs.compile(template)(context);
 
     expect(result).toMatchSnapshot();
-  });
-
-  it('should return empty with un-supported resource', () => {
-    expect(inline(200)).toEqual('');
-    expect(link(200)).toEqual('');
   });
 });

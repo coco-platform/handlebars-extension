@@ -1,8 +1,11 @@
 module.exports = {
-  moduleFileExtensions: ['js', 'json'],
+  transform: {
+    '\\.(ts|tsx)$': 'ts-jest',
+  },
+  moduleFileExtensions: ['ts', 'json', 'js'],
   moduleDirectories: ['node_modules'],
   // Coverage report
-  collectCoverageFrom: ['lib/**/*.js'],
+  collectCoverageFrom: ['src/**/*.ts'],
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'html'],
   // Test configuration
@@ -10,6 +13,6 @@ module.exports = {
   // Coverage report
   // Test configuration
   testEnvironment: 'node',
-  testMatch: ['<rootDir>/__tests__/**/*.spec.js'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/es/'],
+  testMatch: ['<rootDir>/__tests__/**/*.spec.ts'],
+  testPathIgnorePatterns: ['/node_modules/', '/lib/'],
 };
