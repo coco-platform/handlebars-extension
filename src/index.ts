@@ -5,3 +5,4 @@
 
 export { inline } from './inline';
 export { link } from './link';
+export { InlineResource, ScriptNode, LinkNode } from './constant';
