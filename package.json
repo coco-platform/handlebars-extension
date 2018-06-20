@@ -1,6 +1,6 @@
 {
   "name": "@coco-platform/handlebars-extension",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A specific handlebars extension collection within MVC.",
   "main": "lib/index.js",
   "engines": {
