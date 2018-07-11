@@ -30,8 +30,8 @@ import { render } from './render';
  * @return {SafeString|string}
  */
 export function link(resource?: ScriptNode | LinkNode): SafeString | string {
-  const scriptRegExp = /\.js$/;
-  const stylesheetRegExp = /\.css$/;
+  const scriptRegExp = /\.js(\?.*)?$/;
+  const stylesheetRegExp = /\.css(\?.*)?$/;
 
   switch (true) {
     case scriptRegExp.test((resource as ScriptNode).src):
