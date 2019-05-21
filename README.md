@@ -1,7 +1,7 @@
 # @coco-platform/handlebars-extension
 
 ![Build Status](https://img.shields.io/travis/coco-platform/handlebars-extension/master.svg?style=flat)
-[![Coverage Status](https://coveralls.io/repos/github/coco-platform/handlebars-extension/badge.svg?branch=master)](https://coveralls.io/github/coco-platform/handlebars-extension?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/coco-platform/handlebars-extension/badge.svg?branch=master)](https://coveralls.io/github/coco-platform/handlebars-extension?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/coco-platform/handlebars-extension.svg)](https://greenkeeper.io/)
 ![Package Dependency](https://david-dm.org/coco-platform/handlebars-extension.svg?style=flat)
 ![Package DevDependency](https://david-dm.org/coco-platform/handlebars-extension/dev-status.svg?style=flat)
 
