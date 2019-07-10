@@ -60,6 +60,6 @@
   },
   "dependencies": {
     "handlebars": "^4.0.11",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.12"
   }
 }
